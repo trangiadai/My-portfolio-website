@@ -26,7 +26,7 @@
 }
 
 .saluteImg {
-  width: 100%;
+  width: 90%;
 }
 
 .saluteText {
@@ -53,7 +53,7 @@
 
 .jobTitle {
   color: #333;
-  font-size: 10vw;
+  font-size: 9vw;
   cursor: default;
   line-height: 100vh;
 }
@@ -270,6 +270,9 @@
 }
 
 @media screen and (max-width: 1024px) {
+  .saluteImg {
+    width: 100%;
+  }
   .name {
     transform: none !important;
   }
