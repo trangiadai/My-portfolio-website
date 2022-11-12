@@ -1,0 +1,347 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  background-color: #1b1c1e;
+  overflow: hidden;
+}
+
+.salute {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  cursor: default;
+  overflow: hidden;
+}
+
+.saluteTextContainer {
+  flex: 3;
+}
+
+.saluteImgContainer {
+  flex: 1;
+}
+
+.saluteImg {
+  width: 100%;
+}
+
+.saluteText {
+  color: #333;
+  font-size: 60vw;
+}
+
+.nameContainer {
+  height: 100vh;
+  background-color: rebeccapurple;
+}
+
+.name {
+  font-size: 20vw;
+  color: #333;
+  cursor: default;
+  text-align: center;
+  line-height: 100vh;
+}
+
+.jobTitleContainer {
+  height: 100vh;
+}
+
+.jobTitle {
+  color: #333;
+  font-size: 10vw;
+  cursor: default;
+  line-height: 100vh;
+}
+
+.dark {
+  background: url(Images/bg1.png);
+}
+
+.purple {
+  background: rebeccapurple url(Images/bg2.png);
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 30vh;
+  padding: 0px 100px;
+}
+
+.projectTitle {
+  font-size: 10vw;
+  color: #333;
+}
+
+.project {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.project:nth-child(2n) {
+  flex-direction: row-reverse;
+}
+
+.phone {
+  width: 300px;
+  height: 600px;
+  position: relative;
+  flex: 1;
+}
+
+.phoneScreen1 {
+  position: absolute;
+  width: 264px;
+  height: 567px;
+  top: 17px;
+  left: 18px;
+  border-radius: 28px;
+  overflow: scroll;
+}
+
+.phoneScreen1::-webkit-scrollbar {
+  display: none;
+}
+
+.phoneProjectImg1 {
+  width: 100%;
+}
+
+.phoneScreen2 {
+  position: absolute;
+  width: 235px;
+  height: 550px;
+  top: 17px;
+  left: 18px;
+  border-radius: 28px;
+  overflow: scroll;
+}
+
+.phoneProjectImg2 {
+  width: 100%;
+  height: 550px;
+}
+
+.phoneScreen2::-webkit-scrollbar {
+  display: none;
+}
+
+.cellPhoneImg2 {
+  width: 270px;
+  height: 584px;
+}
+
+.projectDetail {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.projectTitle {
+  font-size: 4vw;
+  color: #555;
+}
+
+.projectDecs {
+  font-size: 20px;
+  color: #555;
+  text-align: justify;
+  line-height: 40px;
+}
+
+.projectButton {
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 1px solid #555;
+  color: #555;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.projectButton::after {
+  content: "View Demo";
+  width: 100%;
+  height: 100%;
+  background-color: #555;
+  color: #1b1c1e;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s all;
+}
+
+.projectButton:hover.projectButton::after {
+  transform: translateX(100%);
+}
+
+.laptop {
+  position: relative;
+  width: 600px;
+  height: 379px;
+  flex: 1;
+}
+
+.laptopScreen {
+  position: absolute;
+  width: 451px;
+  height: 283px;
+  top: 18px;
+  left: 69px;
+  overflow: scroll;
+}
+
+.laptopProjectImg {
+  width: 100%;
+}
+
+.laptopScreen::-webkit-scrollbar {
+  display: none;
+}
+
+.githubContainer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.githubTitle {
+  font-size: 100px;
+  color: #555;
+}
+
+.dates {
+  padding: 10px;
+  color: #555;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.githubChart {
+  width: 820px;
+  text-align: center;
+}
+
+.boxContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.box {
+  width: 15px;
+  height: 15px;
+  background-color: #171c25;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: 3s ease;
+}
+
+.active:nth-child(4n) {
+  background-color: #195b2c;
+}
+
+.githubChart:hover .active:nth-child(2n + 1) {
+  background-color: #195b2c;
+}
+
+.githubChart:hover .active:nth-child(2n + 2) {
+  background-color: #063f24;
+}
+
+.githubSm {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .name {
+    transform: none !important;
+  }
+
+  .projects {
+    padding: 0 30px;
+    text-align: center;
+  }
+
+  .projectTitle {
+    font-size: 10vw;
+  }
+
+  .project {
+    flex-direction: column;
+    height: max-content;
+  }
+
+  .project:nth-child(2n) {
+    flex-direction: column;
+  }
+
+  .phoneScreen2 {
+    left: 32px;
+  }
+
+  .laptop {
+    position: relative;
+    width: 600px;
+    height: 379px;
+    flex: 1;
+  }
+
+  .laptopScreen {
+    position: absolute;
+    width: 282px;
+    height: 150px;
+    top: 9px;
+    left: 156px;
+    overflow: scroll;
+  }
+
+  .laptopProjectImg {
+    width: 80%;
+  }
+
+  .laptopImg {
+    width: 300px;
+    height: 200px;
+  }
+
+  .phone,
+  .laptop {
+    transform: none !important;
+  }
+
+  .githubChart {
+    display: none;
+  }
+
+  .githubTitle {
+    text-align: center;
+    font-size: 10vw;
+  }
+
+  .githubSm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    color: #555;
+    font-size: 30px;
+  }
+}
